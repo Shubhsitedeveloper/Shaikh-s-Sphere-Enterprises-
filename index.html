@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shaikh's Sphere Enterprises | Air conditioning, ventilation and AMC</title>
+<meta name="description" content="Shaikh's Sphere Enterprises designs, installs and maintains air conditioning, VRF, ventilation and ducting systems for homes, offices and commercial spaces.">
+<meta name="theme-color" content="#0E1E4A">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!-- ============================================================
+     HOW TO EDIT THIS SITE
+     1. Phone, WhatsApp, email, address, hours: assets/js/config.js
+     2. Text: edit it right here in this file. Each section is labelled.
+     3. Colours and fonts: the :root block at the top of assets/css/style.css
+     Search for "PLACEHOLDER" to find everything that must be replaced.
+     ============================================================ -->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- PLACEHOLDER: remove this bar before handing the site over (or set showDemoBar: false in config.js) -->
+<div class="demo-bar" id="demo-bar">
+  <p><strong>Demo preview.</strong> Phone, address and projects are samples and will be replaced.</p>
+  <button type="button" id="demo-bar-close" aria-label="Hide this notice">
+    <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+</div>
+
+<!-- ======================= HEADER ======================= -->
+<header class="header" id="site-header">
+  <div class="wrap header__in">
+    <a class="header__logo" href="#top" aria-label="Shaikh's Sphere Enterprises, home">
+      <img src="assets/img/logo-horizontal.svg" width="920" height="268" alt="Shaikh's Sphere Enterprises">
+    </a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">
+      <span class="menu-btn__bars" aria-hidden="true"></span>
+      <span class="menu-btn__label">Menu</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#sectors">Who we serve</a>
+      <a href="#estimator">AC size estimator</a>
+      <a href="#process">Process</a>
+      <a href="#amc">AMC</a>
+      <a href="#contact">Contact</a>
+      <a class="nav__call" data-link="tel" href="#contact">
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M4.2 2.8h2.9l1.4 3.6-1.9 1.3a9.6 9.6 0 0 0 5.7 5.7l1.3-1.9 3.6 1.4v2.9a1.6 1.6 0 0 1-1.7 1.6C9 17 3 11 2.6 4.5a1.6 1.6 0 0 1 1.6-1.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span data-c="phoneDisplay">+91 90000 00000</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top">
+  <div class="wrap hero__in">
+    <div class="hero__copy">
+      <p class="hero__kicker">HVAC solutions &amp; services</p>
+      <h1>Cool air, exactly where your building needs it.</h1>
+      <p class="hero__lead">We design, install and maintain air conditioning, ventilation and ducting for homes, offices and commercial spaces. One team, from the first site survey to the yearly service.</p>
+      <div class="hero__cta">
+        <a class="btn btn--navy" href="#contact">Book a free site visit</a>
+        <a class="link-arrow" href="#estimator">Estimate your AC size</a>
+      </div>
+      <ul class="hero__points">
+        <li>Sizing based on a heat-load calculation</li>
+        <li>All major AC brands installed and serviced</li>
+        <li>AMC and breakdown support</li>
+      </ul>
+    </div>
+
+    <!-- The building drawing. Room notes are edited in the "stages" list further down. -->
+    <figure class="bld" id="building">
+      <div class="bld__panel">
+        <svg class="bld__svg draw" viewBox="30 30 710 600" role="img" aria-labelledby="bld-title bld-desc">
+          <title id="bld-title">Cross-section of a three-storey building and its air conditioning</title>
+          <desc id="bld-desc">A home on the top floor with split air conditioners, an office on the first floor cooled through ceiling ducts, and a restaurant with cassette units and a kitchen exhaust on the ground floor. Outdoor units and the exhaust outlet sit on the terrace.</desc>
+
+          <!-- sky and ground -->
+          <path class="cloud" d="M54 100a10 10 0 0 1 2-19.8A16 16 0 0 1 86 74a13 13 0 0 1 20 13 6.5 6.5 0 0 1-2 13Z"/>
+          <path class="cloud" transform="translate(196 6) scale(.62)" d="M54 100a10 10 0 0 1 2-19.8A16 16 0 0 1 86 74a13 13 0 0 1 20 13 6.5 6.5 0 0 1-2 13Z"/>
+          <text class="tmp tmp--out" x="44" y="124">38°<tspan class="tmp__w"> outside</tspan></text>
+          <rect class="earth" x="30" y="602" width="710" height="28"/>
+
+          <!-- room backgrounds (these light up) -->
+          <rect class="rm" data-room="terrace" x="120" y="52" width="520" height="118" rx="10"/>
+          <rect class="rm rm--home" data-room="bedroom" x="120" y="182" width="210" height="128"/>
+          <rect class="rm rm--home" data-room="living" x="336" y="182" width="248" height="128"/>
+          <rect class="rm rm--office" data-room="office" x="120" y="322" width="464" height="128"/>
+          <rect class="rm rm--dining" data-room="dining" x="120" y="462" width="280" height="128"/>
+          <rect class="rm rm--kitchen" data-room="kitchen" x="406" y="462" width="178" height="128"/>
+          <rect class="shaft" x="590" y="182" width="50" height="408"/>
+          <g class="tile"><path d="M406 512H584M406 540H584M436 462V590M466 462V590M496 462V590M526 462V590M556 462V590"/></g>
+          <rect class="void" x="120" y="322" width="464" height="34"/>
+          <rect class="void" x="120" y="462" width="280" height="30"/>
+          <rect class="shade" x="120" y="182" width="464" height="4"/>
+          <rect class="shade" x="406" y="462" width="178" height="4"/>
+          <rect class="floor" x="120" y="305" width="210" height="5"/>
+          <rect class="floor" x="336" y="305" width="248" height="5"/>
+          <rect class="floor floor--grey" x="120" y="445" width="464" height="5"/>
+          <rect class="floor" x="120" y="585" width="280" height="5"/>
+          <rect class="floor floor--grey" x="406" y="585" width="178" height="5"/>
+
+          <!-- structure: cut walls and slabs -->
+          <g class="cut">
+            <rect x="110" y="170" width="540" height="12"/>
+            <rect x="110" y="310" width="540" height="12"/>
+            <rect x="110" y="450" width="540" height="12"/>
+            <rect x="96" y="590" width="568" height="12"/>
+            <rect x="110" y="146" width="10" height="74"/>
+            <rect x="110" y="280" width="10" height="90"/>
+            <rect x="110" y="430" width="10" height="32"/>
+            <rect x="640" y="146" width="10" height="444"/>
+            <rect x="584" y="182" width="6" height="408"/>
+            <rect x="330" y="182" width="6" height="128"/>
+            <rect x="400" y="462" width="6" height="128"/>
+          </g>
+          <g class="glass"><path d="M115 220V280M115 370V430M115 462V590"/></g>
+          <path class="awning" d="M110 464L70 486H110Z"/>
+          <path class="ln" d="M30 602H740"/>
+
+          <!-- service van at the kerb (hidden on small screens) -->
+          <g class="van">
+            <path class="ln ln--thin" d="M674 565H706M679 565V569M701 565V569"/>
+            <path class="van__body" d="M668 596V572a3 3 0 0 1 3-3H712l13 13h7a3 3 0 0 1 3 3V596Z"/>
+            <path class="van__win" d="M713 573.5l8 8.5h-8Z"/>
+            <path class="van__stripe" d="M668 586H706"/>
+            <circle class="van__wheel" cx="683" cy="597" r="6"/><circle class="van__wheel" cx="721" cy="597" r="6"/>
+            <circle class="van__hub" cx="683" cy="597" r="2"/><circle class="van__hub" cx="721" cy="597" r="2"/>
+          </g>
+
+          <!-- false ceilings -->
+          <path class="ln ln--thin" d="M120 356H584M120 492H400"/>
+
+          <!-- furniture -->
+          <g class="fur">
+            <!-- bedroom -->
+            <rect x="318" y="258" width="8" height="52" rx="2"/>
+            <rect x="214" y="288" width="104" height="13" rx="4"/>
+            <rect x="292" y="279" width="24" height="9" rx="4"/>
+            <path d="M218 301V310M314 301V310M190 290H208M192 290V310M206 290V310M199 290V276M192 276H206L203 266H195Z"/>
+            <!-- living -->
+            <rect x="452" y="268" width="100" height="16" rx="5"/>
+            <rect x="446" y="284" width="112" height="16" rx="5"/>
+            <path d="M454 300V310M550 300V310M388 294H430M394 294V310M424 294V310M568 310V246M560 246H576L572 232H564Z"/>
+            <!-- office -->
+            <path d="M160 410H232M164 410V450M228 410V450M212 410V404M144 404V432H162M153 432V450"/>
+            <rect x="200" y="388" width="24" height="16" rx="2"/>
+            <path d="M290 410H362M294 410V450M358 410V450M342 410V404M274 404V432H292M283 432V450"/>
+            <rect x="330" y="388" width="24" height="16" rx="2"/>
+            <path d="M420 410H492M424 410V450M488 410V450M472 410V404M404 404V432H422M413 432V450"/>
+            <rect x="460" y="388" width="24" height="16" rx="2"/>
+            <!-- dining -->
+            <path d="M170 550H230M200 550V590M188 590H212M150 536V566H166M152 566V590M164 566V590M250 536V566H234M248 566V590M236 566V590"/>
+            <path d="M290 550H350M320 550V590M308 590H332M270 536V566H286M272 566V590M284 566V590M370 536V566H354M368 566V590M356 566V590"/>
+            <!-- kitchen -->
+            <rect x="416" y="516" width="36" height="74" rx="2"/>
+            <path d="M416 542H452M446 524V534M446 550V566"/>
+            <rect x="466" y="558" width="110" height="32"/>
+            <rect x="488" y="543" width="28" height="15" rx="2"/>
+            <path d="M484 548H488M516 548H520M532 552H562V558H532ZM562 554H574"/>
+          </g>
+
+          <!-- plants -->
+          <g transform="translate(134 305)"><path class="leaf" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="leaf" transform="rotate(-34 0 -12)" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="leaf" transform="rotate(34 0 -12)" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="pot" d="M-6-12H6L4.5 0H-4.5Z"/></g>
+          <g transform="translate(352 305)"><path class="leaf" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="leaf" transform="rotate(-34 0 -12)" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="leaf" transform="rotate(34 0 -12)" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="pot" d="M-6-12H6L4.5 0H-4.5Z"/></g>
+          <g transform="translate(566 445)"><path class="leaf" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="leaf" transform="rotate(-34 0 -12)" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="leaf" transform="rotate(34 0 -12)" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="pot" d="M-6-12H6L4.5 0H-4.5Z"/></g>
+
+          <!-- people -->
+          <g class="ppl">
+            <circle cx="153" cy="399" r="5.5"/><path d="M153 413V429H165V447"/><path class="arm" d="M154 415L168 408"/>
+            <circle cx="413" cy="399" r="5.5"/><path d="M413 413V429H425V447"/><path class="arm" d="M414 415L428 408"/>
+            <circle cx="159" cy="533" r="5.5"/><path d="M159 547V563H171V587"/><path class="arm" d="M160 550L174 547"/>
+            <circle cx="241" cy="533" r="5.5"/><path d="M241 547V563H229V587"/><path class="arm" d="M240 550L226 547"/>
+            <circle cx="279" cy="533" r="5.5"/><path d="M279 547V563H291V587"/><path class="arm" d="M280 550L294 547"/>
+            <circle cx="486" cy="259" r="5.5"/><path d="M486 273V289H500V307"/>
+            <!-- technician on the terrace -->
+            <circle cx="428" cy="104" r="5.5"/><path class="hat" d="M421.5 103a6.5 6.5 0 0 1 13 0Z"/><path d="M428 118V140"/><path class="arm" d="M425.6 142V168M430.4 142V168M429 121L447 116"/>
+          </g>
+
+          <!-- ducts -->
+          <g class="duct">
+            <rect x="150" y="332" width="350" height="16"/>
+            <rect x="192" y="348" width="16" height="8"/>
+            <rect x="302" y="348" width="16" height="8"/>
+            <rect x="412" y="348" width="16" height="8"/>
+            <path d="M512 502V478H614V112H634V494H536V502Z"/>
+            <path d="M476 522H572L556 502H492Z"/>
+          </g>
+          <path class="ln" d="M606 112H642L636 100H612Z" fill="#fff"/>
+
+          <!-- equipment -->
+          <g class="eq">
+            <rect x="122" y="196" width="54" height="18" rx="4"/>
+            <rect x="338" y="196" width="54" height="18" rx="4"/>
+            <rect x="500" y="327" width="78" height="26" rx="2"/>
+            <path d="M186 356H214L220 362H180Z"/>
+            <path d="M296 356H324L330 362H290Z"/>
+            <path d="M406 356H434L440 362H400Z"/>
+            <rect x="172" y="476" width="56" height="16"/>
+            <rect x="164" y="492" width="72" height="5" rx="1"/>
+            <rect x="292" y="476" width="56" height="16"/>
+            <rect x="284" y="492" width="72" height="5" rx="1"/>
+            <rect x="138" y="124" width="66" height="42" rx="4"/>
+            <rect x="332" y="124" width="66" height="42" rx="4"/>
+            <rect x="458" y="86" width="94" height="80" rx="4"/>
+            <rect x="470" y="76" width="70" height="10" rx="2"/>
+          </g>
+          <g class="ln ln--thin">
+            <path d="M128 209H170M344 209H386M524 353H556"/>
+            <path d="M144 166V170M198 166V170M338 166V170M392 166V170M466 166V170M544 166V170"/>
+            <circle cx="160" cy="145" r="14"/><circle cx="354" cy="145" r="14"/>
+            <path d="M184 134H196M184 141H196M184 148H196M184 155H196M378 134H390M378 141H390M378 148H390M378 155H390"/>
+            <path d="M468 102H542M468 112H542M468 122H542M468 132H542M468 142H542M468 152H542"/>
+            <path d="M512 340H566"/>
+          </g>
+          <!-- outdoor-unit fans (these spin) -->
+          <g class="fan">
+            <path class="fan__b" d="M160 145c-2-5-1-9 0-11c3 3 3 7 0 11c5-2 9-1 11 0c-3 3-7 3-11 0c2 5 1 9 0 11c-3-3-3-7 0-11c-5 2-9 1-11 0c3-3 7-3 11 0Z"/>
+            <path class="fan__b" d="M354 145c-2-5-1-9 0-11c3 3 3 7 0 11c5-2 9-1 11 0c-3 3-7 3-11 0c2 5 1 9 0 11c-3-3-3-7 0-11c-5 2-9 1-11 0c3-3 7-3 11 0Z"/>
+          </g>
+
+          <!-- refrigerant piping -->
+          <g class="pipe">
+            <path d="M150 196V166"/>
+            <path d="M366 196V166"/>
+            <path d="M552 150H602V469H200V476"/>
+            <path d="M320 469V476"/>
+            <path d="M602 340H578"/>
+          </g>
+
+          <!-- air: cool supply -->
+          <g class="air air--cool">
+            <path d="M178 211C214 214 248 232 262 268"/>
+            <path d="M178 205C232 202 286 218 302 254"/>
+            <path d="M394 211C430 214 464 232 478 262"/>
+            <path d="M394 205C448 202 520 216 540 250"/>
+            <path d="M192 365C188 384 174 396 158 400"/>
+            <path d="M208 365C212 384 226 396 242 400"/>
+            <path d="M302 365C298 384 284 396 268 400"/>
+            <path d="M318 365C322 384 336 396 352 400"/>
+            <path d="M412 365C408 384 394 396 378 400"/>
+            <path d="M428 365C432 384 446 396 462 400"/>
+            <path d="M168 500C150 508 140 522 138 540"/>
+            <path d="M232 500C250 508 260 522 262 540"/>
+            <path d="M288 500C270 508 260 522 258 540"/>
+            <path d="M352 500C370 508 380 522 382 540"/>
+          </g>
+          <!-- air: warm return and exhaust -->
+          <g class="air air--warm">
+            <path d="M540 426C549 408 531 388 540 360"/>
+            <path d="M502 540C496 532 508 526 502 514"/>
+            <path d="M547 548C541 538 553 528 547 514"/>
+            <path d="M524 498V486H624V118"/>
+            <path d="M624 96C617 84 631 74 624 58"/>
+            <path d="M171 118C165 108 177 98 171 86"/>
+            <path d="M365 118C359 108 371 98 365 86"/>
+            <path d="M490 70C484 60 496 52 490 42"/>
+            <path d="M520 70C514 60 526 52 520 42"/>
+          </g>
+
+          <!-- room temperatures -->
+          <g class="tmp">
+            <text x="128" y="246">24°</text>
+            <text x="343" y="246">24°</text>
+            <text x="127" y="382">23°</text>
+            <text x="124" y="518">24°</text>
+            <text x="412" y="486">27°</text>
+          </g>
+
+          <!-- floor labels (hidden on small screens) -->
+          <g class="lbl">
+            <text x="664" y="116">Terrace</text>
+            <text x="664" y="250">Home</text>
+            <text x="664" y="390">Office</text>
+            <text x="664" y="530">Restaurant</text>
+          </g>
+
+          <!-- veils: dim the rooms that are not selected -->
+          <g class="veils">
+            <rect class="veil veil--sky" data-room="terrace" x="120" y="36" width="520" height="134"/>
+            <rect class="veil" data-room="bedroom" x="120" y="182" width="210" height="128"/>
+            <rect class="veil" data-room="living" x="336" y="182" width="248" height="128"/>
+            <rect class="veil" data-room="office" x="120" y="322" width="464" height="128"/>
+            <rect class="veil" data-room="dining" x="120" y="462" width="280" height="128"/>
+            <rect class="veil" data-room="kitchen" x="406" y="462" width="178" height="128"/>
+          </g>
+
+          <!-- hover / tap targets -->
+          <g class="hit">
+            <rect data-room="terrace" x="120" y="40" width="530" height="130"/>
+            <rect data-room="bedroom" x="110" y="176" width="223" height="140"/>
+            <rect data-room="living" x="333" y="176" width="254" height="140"/>
+            <rect data-room="office" x="110" y="316" width="477" height="140"/>
+            <rect data-room="dining" x="110" y="456" width="293" height="140"/>
+            <rect data-room="kitchen" x="403" y="456" width="184" height="140"/>
+          </g>
+        </svg>
+        <ul class="bld__legend" aria-label="Legend">
+          <li><i class="key key--cool"></i>Cool supply air</li>
+          <li><i class="key key--warm"></i>Warm return and exhaust</li>
+          <li><i class="key key--pipe"></i>Refrigerant piping</li>
+        </ul>
+      </div>
+
+      <figcaption class="bld__cap">
+        <div class="bld__rooms" role="group" aria-label="Pick a room to see how it is cooled">
+          <button type="button" data-room="terrace">Terrace</button>
+          <button type="button" data-room="bedroom">Bedroom</button>
+          <button type="button" data-room="living">Living room</button>
+          <button type="button" class="is-on" data-room="office">Office</button>
+          <button type="button" data-room="dining">Restaurant</button>
+          <button type="button" data-room="kitchen">Kitchen</button>
+        </div>
+        <div class="bld__note" aria-live="polite">
+          <strong id="bld-note-title">Office: ducted cooling</strong>
+          <span id="bld-note-text">A concealed unit above the false ceiling feeds insulated GI ducts. Diffusers spread cool air evenly across the desks, and warm air returns through a ceiling grille.</span>
+        </div>
+      </figcaption>
+    </figure>
+
+    <!-- The walk through the building. As the page scrolls, the drawing above stays in view and moves
+         to each of these in turn. To edit a room, change its text here; the buttons under the drawing
+         read from this list. -->
+    <ol class="stages" id="stages" aria-label="How each space in the building is cooled">
+      <li class="stage" data-room="terrace" data-title="Terrace: outdoor units">
+        <p class="stage__where">Terrace: outdoor units</p>
+        <h3>It starts on the roof.</h3>
+        <p class="stage__text">Outdoor units sit on anti-vibration mounts with clear airflow all around. One larger outdoor unit serves the office and restaurant below, and each home split has its own.</p>
+      </li>
+      <li class="stage" data-room="bedroom" data-title="Bedroom: inverter split AC">
+        <p class="stage__where">Bedroom: inverter split AC</p>
+        <h3>A bedroom that stays quiet all night.</h3>
+        <p class="stage__text">Sized for the room, so it runs quietly at low speed through the night. Copper piping and the drain line are concealed in the wall before the paint goes on.</p>
+      </li>
+      <li class="stage" data-room="living" data-title="Living room: split AC">
+        <p class="stage__where">Living room: split AC</p>
+        <h3>Air that sweeps the room, not the sofa.</h3>
+        <p class="stage__text">Placed so the air sweeps the length of the room instead of blowing straight at the sofa. The outdoor unit goes on the terrace, out of sight and earshot.</p>
+      </li>
+      <li class="stage" data-room="office" data-title="Office: ducted cooling">
+        <p class="stage__where">Office: ducted cooling</p>
+        <h3>One concealed unit, even air at every desk.</h3>
+        <p class="stage__text">A concealed unit above the false ceiling feeds insulated GI ducts. Diffusers spread cool air evenly across the desks, and warm air returns through a ceiling grille.</p>
+      </li>
+      <li class="stage" data-room="dining" data-title="Restaurant: cassette units">
+        <p class="stage__where">Restaurant: cassette units</p>
+        <h3>No table sits in a draught.</h3>
+        <p class="stage__text">Ceiling cassettes throw air outwards along the ceiling so no table sits in a draught. The dining hall is kept at slightly higher pressure so kitchen smells stay in the kitchen.</p>
+      </li>
+      <li class="stage" data-room="kitchen" data-title="Kitchen: exhaust and fresh air">
+        <p class="stage__where">Kitchen: exhaust and fresh air</p>
+        <h3>Heat and fumes go straight up and out.</h3>
+        <p class="stage__text">The hood captures heat and fumes over the range. A duct carries them up the service shaft to the terrace, and fresh air is brought in to replace what is removed.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= SERVICES ======================= -->
+<!-- PLACEHOLDER: confirm this list matches the services the company really offers -->
+<section class="sec services" id="services">
+  <div class="wrap services__in">
+    <header class="sec__head services__head">
+      <h2>Complete climate systems, built around your space.</h2>
+      <p>From a single split AC to a full building. Every job starts with the right sizing, so you never pay for capacity you do not need.</p>
+      <a class="link-arrow" href="#contact">Talk to us about your site</a>
+    </header>
+    <ul class="svc-list">
+      <li class="svc">
+        <svg class="svc__ico draw" viewBox="0 0 48 48" aria-hidden="true"><g class="eq"><rect x="5" y="9" width="36" height="14" rx="4"/></g><path class="ln ln--thin" d="M11 19H35"/><g class="pipe"><path d="M41 15h4V5"/></g><g class="air air--cool"><path d="M15 28C14 33 12 37 8 41"/><path d="M23 28V42"/><path d="M31 28C32 33 34 37 38 41"/></g></svg>
+        <div>
+          <h3>Air conditioning</h3>
+          <p>Split, cassette, ductable and tower units. Supply, installation and neat concealed piping.</p>
+        </div>
+        <p class="svc__tags">Split · Cassette · Ductable</p>
+      </li>
+      <li class="svc">
+        <svg class="svc__ico draw" viewBox="0 0 48 48" aria-hidden="true"><g class="eq"><rect x="7" y="7" width="10" height="5" rx="1.5"/><rect x="4" y="12" width="16" height="30" rx="2"/><rect x="34" y="9" width="11" height="8" rx="2"/><rect x="34" y="23" width="11" height="8" rx="2"/><rect x="34" y="37" width="11" height="8" rx="2"/></g><path class="ln ln--thin" d="M8 19h8M8 24h8M8 29h8M8 34h8"/><g class="pipe"><path d="M20 27H34M27 27V13H34M27 27V41H34"/></g></svg>
+        <div>
+          <h3>VRF / VRV systems</h3>
+          <p>One outdoor system for many rooms, each with its own control. Suited to offices, villas and hotels.</p>
+        </div>
+        <p class="svc__tags">Design · Installation · Commissioning</p>
+      </li>
+      <li class="svc">
+        <svg class="svc__ico draw" viewBox="0 0 48 48" aria-hidden="true"><g class="duct"><path d="M19 20V4H29V20Z"/></g><g class="eq"><path d="M6 32H42L33 20H15Z"/></g><g class="air air--warm"><path d="M15 46C13 43 17 41 15 37"/><path d="M24 46C22 43 26 41 24 37"/><path d="M33 46C31 43 35 41 33 37"/><path d="M24 17V7"/></g></svg>
+        <div>
+          <h3>Ventilation &amp; exhaust</h3>
+          <p>Fresh air, kitchen exhaust, basement and toilet ventilation, sized to the air changes each space needs.</p>
+        </div>
+        <p class="svc__tags">Kitchen exhaust · Fresh air · Basement</p>
+      </li>
+      <li class="svc">
+        <svg class="svc__ico draw" viewBox="0 0 48 48" aria-hidden="true"><g class="duct"><path d="M3 8H38V28H26V20H3Z"/></g><path class="ln ln--thin" d="M12 8V20M20 8V20"/><g class="eq"><path d="M23 28H41L45 33H19Z"/></g><g class="air air--cool"><path d="M27 38C26 42 24 44 20 45"/><path d="M37 38C38 42 40 44 44 45"/></g></svg>
+        <div>
+          <h3>Ducting &amp; insulation</h3>
+          <p>GI ducting fabricated and installed with proper insulation, grilles and diffusers for quiet, even airflow.</p>
+        </div>
+        <p class="svc__tags">GI ducts · Insulation · Grilles &amp; diffusers</p>
+      </li>
+      <li class="svc">
+        <svg class="svc__ico draw" viewBox="0 0 48 48" aria-hidden="true"><g class="eq"><rect x="5" y="7" width="38" height="36" rx="2"/><rect x="10" y="13" width="15" height="30"/></g><path class="ln ln--thin" d="M21 26v7"/><path class="cold" d="M34 14v12M29 17l10 6M39 17l-10 6"/><g class="pipe"><path d="M31 36h6"/></g></svg>
+        <div>
+          <h3>Cold rooms &amp; chillers</h3>
+          <p>Cold storage rooms and chilled-water systems for food, pharma and process cooling.</p>
+        </div>
+        <p class="svc__tags">Cold rooms · Chillers · Process cooling</p>
+      </li>
+      <li class="svc">
+        <svg class="svc__ico draw" viewBox="0 0 48 48" aria-hidden="true"><g class="eq"><rect x="6" y="10" width="36" height="32" rx="3"/></g><path class="ln" d="M6 19H42M15 5v9M33 5v9"/><g class="pipe"><path d="M16 30l6 6 11-11"/></g></svg>
+        <div>
+          <h3>AMC, service &amp; repair</h3>
+          <p>Scheduled servicing, gas charging, PCB and compressor repairs, with a contract that keeps breakdowns rare.</p>
+        </div>
+        <p class="svc__tags">AMC · Gas charging · Breakdown calls</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= FACTS BAND ======================= -->
+<section class="band facts" aria-labelledby="facts-h">
+  <div class="wrap">
+    <h2 id="facts-h">Comfort is engineering, not guesswork.</h2>
+    <dl class="facts__grid">
+      <div>
+        <dt>24 °C</dt>
+        <dd><strong>The recommended setpoint.</strong> The default temperature the Bureau of Energy Efficiency asks every new AC in India to ship with.</dd>
+      </div>
+      <div>
+        <dt>6 %</dt>
+        <dd><strong>Saved per degree.</strong> Roughly the electricity saved for every 1 °C you raise the setpoint, as estimated by BEE.</dd>
+      </div>
+      <div>
+        <dt>12,000 <small>BTU/hr</small></dt>
+        <dd><strong>In one ton of cooling.</strong> 1 TR equals 3.517 kW of heat removed. Sizing it right is where every good system begins.</dd>
+      </div>
+      <div>
+        <dt>40 to 60 % <small>RH</small></dt>
+        <dd><strong>The comfort humidity band.</strong> Cooling is half the job. Keeping humidity in this range is what makes a room feel fresh.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ======================= WHO WE SERVE ======================= -->
+<!-- To edit a sector, change the data-* text on its button below. -->
+<section class="sec sectors" id="sectors">
+  <div class="wrap">
+    <header class="sec__head sec__head--wide">
+      <h2>Every space has its own climate.</h2>
+      <p>A restaurant kitchen, a clinic and a bedroom all need cooling, but never the same kind. Pick a space to see how we approach it.</p>
+    </header>
+    <div class="sectors__in">
+      <div class="sectors__tabs" role="tablist" aria-label="Types of space" id="sector-tabs">
+        <button role="tab" id="st-1" aria-selected="true" aria-controls="sector-panel" class="is-on"
+          data-title="Homes &amp; villas"
+          data-text="Bedrooms that stay silent at night and living rooms that cool evenly, with piping and drains concealed before the interiors are finished."
+          data-system="Inverter split, concealed ductable or VRF"
+          data-load="1 TR per 110 to 130 sq ft"
+          data-focus="Quiet running, hidden piping, low power bills">Homes &amp; villas</button>
+        <button role="tab" id="st-2" aria-selected="false" aria-controls="sector-panel" tabindex="-1"
+          data-title="Offices"
+          data-text="Even temperatures across open floors, separate control for cabins and meeting rooms, and fresh air so people stay alert through the afternoon."
+          data-system="VRF with cassettes, or ductable units"
+          data-load="1 TR per 90 to 110 sq ft"
+          data-focus="Zoning, fresh air, work done around office hours">Offices</button>
+        <button role="tab" id="st-3" aria-selected="false" aria-controls="sector-panel" tabindex="-1"
+          data-title="Shops &amp; showrooms"
+          data-text="Doors that open all day and bright display lighting add heat. We size for it, and keep units and grilles out of your sight lines."
+          data-system="Cassette or ductable AC, air curtains"
+          data-load="1 TR per 80 to 90 sq ft"
+          data-focus="Door losses, lighting heat, a clean ceiling">Shops &amp; showrooms</button>
+        <button role="tab" id="st-4" aria-selected="false" aria-controls="sector-panel" tabindex="-1"
+          data-title="Restaurants &amp; kitchens"
+          data-text="A full dining hall and a hot kitchen are two different problems. Exhaust, fresh air and cooling are designed together so smoke and smells never reach the tables."
+          data-system="Ductable AC, kitchen exhaust, fresh-air supply"
+          data-load="1 TR per 60 to 70 sq ft"
+          data-focus="Exhaust balance, odour control, guest comfort">Restaurants &amp; kitchens</button>
+        <button role="tab" id="st-5" aria-selected="false" aria-controls="sector-panel" tabindex="-1"
+          data-title="Clinics &amp; hospitals"
+          data-text="Consulting rooms, labs and waiting areas need clean, steady air. We plan filtration, fresh-air quantity and room pressures along with the cooling."
+          data-system="Ductable or VRF with filtration and fresh air"
+          data-load="Worked out room by room"
+          data-focus="Air quality, reliability, easy servicing">Clinics &amp; hospitals</button>
+        <button role="tab" id="st-6" aria-selected="false" aria-controls="sector-panel" tabindex="-1"
+          data-title="Warehouses &amp; factories"
+          data-text="Large volumes, machine heat and stock that must stay within limits. We combine ventilation, spot cooling and cold rooms where the process needs them."
+          data-system="Industrial ventilation, packaged units, cold rooms"
+          data-load="Based on process and heat load"
+          data-focus="Air changes, uptime, running cost">Warehouses &amp; factories</button>
+      </div>
+      <div class="sectors__panel" role="tabpanel" id="sector-panel" aria-labelledby="st-1" tabindex="0">
+        <h3 id="sp-title">Homes &amp; villas</h3>
+        <p class="sectors__text" id="sp-text">Bedrooms that stay silent at night and living rooms that cool evenly, with piping and drains concealed before the interiors are finished.</p>
+        <dl class="sectors__spec">
+          <div><dt>Typical system</dt><dd id="sp-system">Inverter split, concealed ductable or VRF</dd></div>
+          <div><dt>Rule-of-thumb load</dt><dd id="sp-load">1 TR per 110 to 130 sq ft</dd></div>
+          <div><dt>What we focus on</dt><dd id="sp-focus">Quiet running, hidden piping, low power bills</dd></div>
+        </dl>
+        <a class="link-arrow" href="#contact">Discuss your space</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= AC SIZE ESTIMATOR ======================= -->
+<!-- The rule-of-thumb numbers live in assets/js/main.js, section 5. -->
+<section class="band est" id="estimator">
+  <div class="wrap est__in">
+    <div class="est__copy">
+      <h2>How many tons does your room need?</h2>
+      <p>An undersized AC never cools. An oversized one wastes power and leaves the room clammy. Get a quick first estimate here, and we will confirm it with a proper heat-load calculation on site.</p>
+      <p class="est__unit">1 TR (ton of refrigeration) = 12,000 BTU/hr = 3.517 kW of cooling.</p>
+    </div>
+
+    <form class="est__card" id="est-form" novalidate>
+      <fieldset class="field">
+        <legend>Type of space</legend>
+        <div class="seg">
+          <label><input type="radio" name="est-type" value="home" checked><span>Home</span></label>
+          <label><input type="radio" name="est-type" value="office"><span>Office</span></label>
+          <label><input type="radio" name="est-type" value="shop"><span>Shop</span></label>
+          <label><input type="radio" name="est-type" value="restaurant"><span>Restaurant</span></label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="est-area" class="field__row">Floor area <output id="est-area-out" for="est-area">180 sq ft</output></label>
+        <input type="range" id="est-area" min="60" max="3000" step="10" value="180">
+      </div>
+
+      <div class="field-pair">
+        <div class="field">
+          <label for="est-height">Ceiling height</label>
+          <select id="est-height">
+            <option value="9">Up to 9 ft</option>
+            <option value="10" selected>10 ft</option>
+            <option value="12">12 ft</option>
+            <option value="14">14 ft or more</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="est-people">People usually inside</label>
+          <input type="number" id="est-people" min="1" max="200" value="2" inputmode="numeric">
+        </div>
+      </div>
+
+      <label class="check" for="est-sun">
+        <input type="checkbox" id="est-sun">
+        <span>Top floor, or gets strong afternoon sun</span>
+      </label>
+
+      <div class="est__result" id="est-result" aria-live="polite">
+        <p class="est__big"><span id="est-tr">1.5</span> <small>TR</small></p>
+        <div class="est__txt">
+          <p class="est__system" id="est-system">Split AC</p>
+          <p class="est__units"><span id="est-kw">5.3</span> kW · <span id="est-btu">18,000</span> BTU/hr</p>
+        </div>
+        <!-- small drawings of the suggested system; main.js shows the one that matches -->
+        <div class="est__sys" aria-hidden="true">
+          <svg class="draw draw--dark" data-sys="split" viewBox="0 0 120 76"><g class="eq"><rect x="26" y="12" width="64" height="20" rx="5"/></g><path class="ln ln--thin" d="M34 26H82"/><g class="pipe"><path d="M90 20h14V4"/></g><g class="air air--cool"><path d="M42 40C40 50 36 58 28 66"/><path d="M58 40V68"/><path d="M74 40C76 50 80 58 88 66"/></g></svg>
+          <svg class="draw draw--dark" data-sys="cassette" viewBox="0 0 120 76" hidden><path class="ln ln--thin" d="M4 24H116"/><g class="eq"><rect x="40" y="8" width="40" height="16"/><rect x="30" y="24" width="60" height="6" rx="1"/></g><g class="pipe"><path d="M80 14h36"/></g><g class="air air--cool"><path d="M32 36C20 42 12 54 9 68"/><path d="M88 36C100 42 108 54 111 68"/></g><g class="air air--warm"><path d="M60 66V36"/></g></svg>
+          <svg class="draw draw--dark" data-sys="ductable" viewBox="0 0 120 76" hidden><path class="ln ln--thin" d="M4 36H116"/><g class="duct"><rect x="8" y="14" width="68" height="12"/><rect x="22" y="26" width="10" height="10"/><rect x="52" y="26" width="10" height="10"/></g><g class="eq"><rect x="76" y="8" width="36" height="24" rx="2"/><path d="M17 36H37L41 41H13Z"/><path d="M47 36H67L71 41H43Z"/></g><g class="air air--cool"><path d="M22 46C21 54 17 62 10 68"/><path d="M32 46C33 54 37 62 44 68"/><path d="M52 46C51 54 49 62 46 68"/><path d="M62 46C63 54 67 62 74 68"/></g><g class="air air--warm"><path d="M96 68V40"/></g></svg>
+          <svg class="draw draw--dark" data-sys="vrf" viewBox="0 0 120 76" hidden><g class="eq"><rect x="10" y="6" width="22" height="7" rx="2"/><rect x="6" y="13" width="30" height="56" rx="3"/><rect x="82" y="8" width="32" height="13" rx="3"/><rect x="82" y="32" width="32" height="13" rx="3"/><rect x="82" y="56" width="32" height="13" rx="3"/></g><path class="ln ln--thin" d="M11 24h20M11 32h20M11 40h20M11 48h20M11 56h20"/><g class="pipe"><path d="M36 38H82M60 38V14H82M60 38V62H82"/></g></svg>
+        </div>
+      </div>
+      <p class="est__fine">A rule-of-thumb estimate only. Glass area, insulation, equipment and local weather change the real figure.</p>
+      <a class="btn btn--navy btn--block" href="#contact" id="est-cta">Get this confirmed with a free site visit</a>
+    </form>
+  </div>
+</section>
+
+<!-- ======================= PROCESS ======================= -->
+<section class="sec process" id="process">
+  <div class="wrap">
+    <header class="sec__head sec__head--wide">
+      <h2>Five steps, one accountable team.</h2>
+      <p>The people who survey your site are the people who stand behind the system afterwards.</p>
+    </header>
+    <ol class="steps" id="steps">
+      <li><span class="steps__n" aria-hidden="true">1</span><h3>Site survey</h3><p>We visit, measure and understand how the space is used, where the sun hits and where units can sit.</p></li>
+      <li><span class="steps__n" aria-hidden="true">2</span><h3>Design &amp; quote</h3><p>Heat-load calculation, equipment selection and a layout drawing, with a clear itemised quotation.</p></li>
+      <li><span class="steps__n" aria-hidden="true">3</span><h3>Installation</h3><p>Copper piping, drain lines, ducting and electrical work done by our own trained technicians.</p></li>
+      <li><span class="steps__n" aria-hidden="true">4</span><h3>Testing &amp; handover</h3><p>Pressure test, vacuum, gas charge and airflow balancing. You get the system running and explained.</p></li>
+      <li><span class="steps__n" aria-hidden="true">5</span><h3>Service &amp; AMC</h3><p>Scheduled maintenance and quick breakdown response keep the system efficient year after year.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= PROJECTS ======================= -->
+<!-- PLACEHOLDER: all three projects are samples. Replace the titles and details, and add real photos:
+     put the photo in assets/img and replace the <svg class="proj__art">...</svg> drawing inside <div class="proj__slot"> with
+     <img class="proj__art" src="assets/img/your-photo.jpg" alt="..."> and delete the "Sample project" tag. -->
+<section class="sec projects" id="projects">
+  <div class="wrap">
+    <header class="sec__head sec__head--wide">
+      <h2>The kind of work we take on.</h2>
+      <p>Three typical jobs, drawn here as samples. Real project photos and details will replace them.</p>
+    </header>
+    <div class="proj-grid">
+      <article class="proj proj--a">
+        <div class="proj__slot"><span class="proj__tag">Sample project</span><svg class="proj__art draw" viewBox="0 0 360 240" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+            <rect class="rm rm--faint" x="26" y="0" width="308" height="42"/>
+            <rect class="floor floor--grey" x="26" y="37" width="308" height="5"/>
+            <rect class="rm rm--office" x="26" y="52" width="308" height="140"/>
+            <rect class="void" x="26" y="52" width="308" height="34"/>
+            <rect class="floor floor--grey" x="26" y="187" width="308" height="5"/>
+            <rect class="rm rm--faint" x="26" y="202" width="308" height="38"/>
+            <rect class="void" x="26" y="202" width="308" height="26"/>
+            <g class="cut"><rect x="16" y="42" width="328" height="10"/><rect x="16" y="192" width="328" height="10"/><rect x="16" y="0" width="10" height="102"/><rect x="16" y="160" width="10" height="80"/><rect x="334" y="0" width="10" height="240"/></g>
+            <g class="glass"><path d="M21 102V160"/></g>
+            <path class="glass-thin" d="M244 86V187"/>
+            <path class="ln ln--thin" d="M26 86H334M26 228H334"/>
+            <g class="fur">
+              <path d="M46 144V172H64M55 172V190M62 150H134M66 150V190M130 150V190M114 150V144"/>
+              <rect x="102" y="128" width="24" height="16" rx="2"/>
+              <path d="M142 144V172H160M151 172V190M158 150H230M162 150V190M226 150V190M210 150V144"/>
+              <rect x="198" y="128" width="24" height="16" rx="2"/>
+              <path d="M270 156H316M293 156V190M281 190H305M254 142V170H268M256 170V190M266 170V190M330 142V170H316M328 170V190M318 170V190"/>
+            </g>
+            <g class="ppl">
+              <circle cx="55" cy="139" r="5.5"/><path d="M55 153V169H67V187"/><path class="arm" d="M56 155L70 148"/>
+              <circle cx="151" cy="139" r="5.5"/><path d="M151 153V169H163V187"/><path class="arm" d="M152 155L166 148"/>
+              <circle cx="261" cy="137" r="5.5"/><path d="M261 151V167H273V187"/><path class="arm" d="M262 154L276 152"/>
+            </g>
+            <g class="pipe"><path d="M334 55H102V72M198 55V72M294 55V72"/></g>
+            <g class="duct"><rect x="40" y="58" width="232" height="11"/><rect x="60" y="212" width="200" height="11"/></g>
+            <g class="eq">
+              <rect x="80" y="72" width="44" height="14"/><rect x="74" y="86" width="56" height="5" rx="1"/>
+              <rect x="176" y="72" width="44" height="14"/><rect x="170" y="86" width="56" height="5" rx="1"/>
+              <rect x="272" y="72" width="44" height="14"/><rect x="266" y="86" width="56" height="5" rx="1"/>
+            </g>
+            <g class="air air--cool">
+              <path d="M78 94C66 100 58 110 56 124"/><path d="M126 94C138 100 146 110 148 124"/>
+              <path d="M174 94C164 100 158 110 157 124"/><path d="M222 94C230 100 236 110 238 124"/>
+              <path d="M270 94C262 100 256 110 254 122"/><path d="M318 94C324 100 327 110 328 122"/>
+            </g>
+            <g class="tmp"><text x="32" y="108">23°</text></g>
+          </svg></div>
+        <p class="proj__kind">Office · VRF</p>
+        <h3>Corporate office fit-out</h3>
+        <p>VRF system with cassette units and fresh-air ducting across two floors.</p>
+        <dl><div><dt>Capacity</dt><dd>40 TR</dd></div><div><dt>Indoor units</dt><dd>18</dd></div><div><dt>System</dt><dd>VRF</dd></div></dl>
+      </article>
+      <article class="proj proj--b">
+        <div class="proj__slot"><span class="proj__tag">Sample project</span><svg class="proj__art draw" viewBox="0 0 360 240" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+            <path class="cloud" transform="translate(96 -62) scale(.8)" d="M54 100a10 10 0 0 1 2-19.8A16 16 0 0 1 86 74a13 13 0 0 1 20 13 6.5 6.5 0 0 1-2 13Z"/>
+            <rect class="earth" x="0" y="212" width="360" height="28"/>
+            <rect class="rm rm--dining" x="40" y="72" width="156" height="130"/>
+            <rect class="rm rm--kitchen" x="202" y="72" width="118" height="130"/>
+            <g class="tile"><path d="M202 116H320M202 144H320M232 72V202M262 72V202M292 72V202"/></g>
+            <rect class="void" x="40" y="72" width="156" height="28"/>
+            <rect class="floor" x="40" y="197" width="156" height="5"/>
+            <rect class="floor floor--grey" x="202" y="197" width="118" height="5"/>
+            <g class="cut"><rect x="30" y="62" width="300" height="10"/><rect x="22" y="202" width="316" height="10"/><rect x="30" y="50" width="10" height="52"/><rect x="320" y="50" width="10" height="152"/><rect x="196" y="72" width="6" height="130"/></g>
+            <g class="glass"><path d="M35 102V202"/></g>
+            <path class="awning" d="M30 104L4 120H30Z"/>
+            <path class="ln" d="M0 212H360"/>
+            <path class="ln ln--thin" d="M40 100H196"/>
+            <g class="fur">
+              <path d="M88 162H148M118 162V202M106 202H130M68 148V178H84M70 178V202M82 178V202M168 148V178H152M166 178V202M154 178V202"/>
+              <rect x="226" y="170" width="84" height="27"/>
+              <rect x="240" y="156" width="24" height="14" rx="2"/>
+              <path d="M236 161H240M264 161H268M274 164H298V170H274ZM298 166H308"/>
+            </g>
+            <g class="ppl">
+              <circle cx="77" cy="145" r="5.5"/><path d="M77 159V175H89V199"/><path class="arm" d="M78 162L92 159"/>
+              <circle cx="159" cy="145" r="5.5"/><path d="M159 159V175H147V199"/><path class="arm" d="M158 162L144 159"/>
+              <circle cx="214" cy="134" r="5.5"/><path class="hat hat--chef" d="M208 132v-6a6 6 0 0 1 12 0v6Z"/><path d="M214 148V172"/><path class="arm" d="M211.6 174V197M216.4 174V197M215 151L232 158"/>
+            </g>
+            <g class="pipe"><path d="M116 50H170V76"/></g>
+            <g class="duct">
+              <rect x="52" y="80" width="98" height="12"/><rect x="70" y="92" width="12" height="8"/><rect x="126" y="92" width="12" height="8"/>
+              <path d="M254 104V38H274V104Z"/><path d="M222 122H306L292 104H236Z"/>
+            </g>
+            <path class="ln" d="M247 38H281L276 28H252Z" fill="#fff"/>
+            <g class="eq">
+              <rect x="150" y="76" width="40" height="19" rx="2"/>
+              <path d="M64 100H88L93 105H59Z"/><path d="M120 100H144L149 105H115Z"/>
+              <rect x="60" y="26" width="56" height="34" rx="4"/>
+            </g>
+            <g class="ln ln--thin"><circle cx="78" cy="43" r="11"/><path d="M98 34H109M98 40H109M98 46H109M98 52H109M66 60V62M110 60V62M158 86H182"/></g>
+            <g class="fan" transform="translate(78 43) scale(.8)"><path class="fan__b" d="M0 0c-2-5-1-9 0-11c3 3 3 7 0 11c5-2 9-1 11 0c-3 3-7 3-11 0c2 5 1 9 0 11c-3-3-3-7 0-11c-5 2-9 1-11 0c3-3 7-3 11 0Z"/></g>
+            <g class="air air--cool">
+              <path d="M70 109C68 120 62 130 52 136"/><path d="M82 109C84 120 90 130 100 136"/>
+              <path d="M126 109C124 120 118 130 108 136"/><path d="M138 109C140 120 146 130 156 136"/>
+            </g>
+            <g class="air air--warm">
+              <path d="M252 152C247 144 257 138 252 126"/><path d="M287 160C282 150 292 140 287 126"/>
+              <path d="M264 100V42"/><path d="M264 24C258 16 270 10 264 0"/>
+            </g>
+          </svg></div>
+        <p class="proj__kind">Restaurant · Exhaust</p>
+        <h3>Restaurant &amp; commercial kitchen</h3>
+        <p>Kitchen exhaust hood, fresh-air supply and ductable cooling for the dining hall.</p>
+        <dl><div><dt>Capacity</dt><dd>22 TR</dd></div><div><dt>Exhaust</dt><dd>Hood + ESP</dd></div><div><dt>System</dt><dd>Ductable</dd></div></dl>
+      </article>
+      <article class="proj proj--c">
+        <div class="proj__slot"><span class="proj__tag">Sample project</span><svg class="proj__art draw" viewBox="0 0 360 240" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+            <path class="cloud" transform="translate(246 -52) scale(.8)" d="M54 100a10 10 0 0 1 2-19.8A16 16 0 0 1 86 74a13 13 0 0 1 20 13 6.5 6.5 0 0 1-2 13Z"/>
+            <rect class="earth" x="0" y="212" width="360" height="28"/>
+            <rect class="rm rm--home" x="88" y="44" width="184" height="74"/>
+            <rect class="rm rm--home" x="88" y="128" width="184" height="74"/>
+            <rect class="void" x="88" y="44" width="184" height="15"/>
+            <rect class="void" x="88" y="128" width="184" height="15"/>
+            <rect class="floor" x="88" y="113" width="184" height="5"/>
+            <rect class="floor" x="88" y="197" width="184" height="5"/>
+            <g class="cut"><rect x="72" y="34" width="216" height="10"/><rect x="80" y="118" width="200" height="10"/><rect x="70" y="202" width="220" height="10"/><rect x="80" y="22" width="8" height="42"/><rect x="80" y="100" width="8" height="46"/><rect x="80" y="188" width="8" height="24"/><rect x="272" y="22" width="8" height="190"/></g>
+            <g class="glass"><path d="M84 64V100M84 146V188"/></g>
+            <path class="ln" d="M0 212H360M42 212V172"/>
+            <path class="leaf" d="M42 178c-13 0-19-11-15-21c-6-11 3-23 15-21c12-2 21 10 15 21c4 10-2 21-15 21Z"/>
+            <path class="ln ln--thin" d="M88 59H272M88 143H272"/>
+            <g class="fur">
+              <rect x="92" y="84" width="6" height="34" rx="2"/><rect x="98" y="98" width="76" height="11" rx="4"/><rect x="100" y="90" width="20" height="8" rx="4"/>
+              <path d="M102 109V118M170 109V118"/>
+              <rect x="106" y="166" width="72" height="13" rx="5"/><rect x="100" y="179" width="84" height="13" rx="5"/>
+              <path d="M106 192V202M178 192V202M204 190H232M208 190V202M228 190V202"/>
+            </g>
+            <g transform="translate(256 197)"><path class="leaf" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="leaf" transform="rotate(-34 0 -12)" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="leaf" transform="rotate(34 0 -12)" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="pot" d="M-6-12H6L4.5 0H-4.5Z"/></g>
+            <g transform="translate(250 113) scale(.8)"><path class="leaf" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="leaf" transform="rotate(-34 0 -12)" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="leaf" transform="rotate(34 0 -12)" d="M0-12C-6-22-5-32 0-38C5-32 6-22 0-12Z"/><path class="pot" d="M-6-12H6L4.5 0H-4.5Z"/></g>
+            <g class="ppl"><circle cx="134" cy="157" r="5.5"/><path d="M134 171V185H146V199"/></g>
+            <g class="pipe"><path d="M304 178V160H286V51H268M286 135H268"/></g>
+            <g class="duct"><rect x="176" y="47" width="56" height="8"/><rect x="176" y="131" width="56" height="8"/></g>
+            <g class="eq">
+              <rect x="232" y="45" width="36" height="12" rx="2"/><rect x="232" y="129" width="36" height="12" rx="2"/>
+              <path d="M180 59H206L210 63H176Z"/><path d="M180 143H206L210 147H176Z"/>
+              <rect x="296" y="178" width="48" height="34" rx="4"/>
+            </g>
+            <g class="ln ln--thin"><circle cx="313" cy="195" r="11"/><path d="M330 187H339M330 193H339M330 199H339M330 205H339"/></g>
+            <g class="fan" transform="translate(313 195) scale(.8)"><path class="fan__b" d="M0 0c-2-5-1-9 0-11c3 3 3 7 0 11c5-2 9-1 11 0c-3 3-7 3-11 0c2 5 1 9 0 11c-3-3-3-7 0-11c-5 2-9 1-11 0c3-3 7-3 11 0Z"/></g>
+            <g class="air air--cool">
+              <path d="M186 67C183 77 176 84 166 88"/><path d="M200 67C203 77 210 84 220 88"/>
+              <path d="M186 151C183 161 176 168 166 172"/><path d="M200 151C203 161 210 168 220 172"/>
+            </g>
+            <g class="air air--warm"><path d="M324 172C319 164 329 158 324 148"/></g>
+          </svg></div>
+        <p class="proj__kind">Residence · Concealed</p>
+        <h3>Private villa</h3>
+        <p>Concealed split and ductable units in every room with fully hidden piping.</p>
+        <dl><div><dt>Capacity</dt><dd>12 TR</dd></div><div><dt>Rooms</dt><dd>7</dd></div><div><dt>System</dt><dd>Split + ductable</dd></div></dl>
+      </article>
+    </div>
+
+    <!-- PLACEHOLDER: confirm which brands the company actually supplies and services -->
+    <div class="brands">
+      <p>Brands we install and service</p>
+      <ul>
+        <li>Daikin</li><li>Voltas</li><li>Blue Star</li><li>Carrier</li><li>Hitachi</li><li>Mitsubishi Electric</li><li>LG</li><li>O General</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= AMC ======================= -->
+<!-- PLACEHOLDER: confirm what each AMC plan really includes (visits per year, parts covered) -->
+<section class="sec amc" id="amc">
+  <div class="wrap">
+    <header class="sec__head sec__head--wide">
+      <h2>Serviced on schedule, not after it fails.</h2>
+      <p>A maintained AC cools faster, uses less power and lasts longer. Choose the annual maintenance contract that suits your equipment.</p>
+    </header>
+    <div class="amc__grid">
+      <article class="plan">
+        <h3>Non-comprehensive AMC</h3>
+        <p class="plan__sum">Labour and servicing covered. Parts billed only when needed.</p>
+        <ul>
+          <li>Scheduled preventive service visits</li>
+          <li>Filter, coil and drain cleaning</li>
+          <li>Gas pressure and electrical checks</li>
+          <li>Breakdown visits, labour included</li>
+          <li class="is-off">Spare parts and gas charged extra</li>
+        </ul>
+        <a class="link-arrow" href="#contact">Ask for a quote</a>
+      </article>
+      <article class="plan plan--full">
+        <p class="plan__flag">Most complete cover</p>
+        <h3>Comprehensive AMC</h3>
+        <p class="plan__sum">Labour and parts covered. One fixed yearly cost, no surprise bills.</p>
+        <ul>
+          <li>Everything in the non-comprehensive plan</li>
+          <li>Spare parts replaced at no extra cost</li>
+          <li>Compressor and PCB cover as per contract</li>
+          <li>Gas top-up included</li>
+          <li>Priority breakdown response</li>
+        </ul>
+        <a class="btn btn--copper" href="#contact">Ask for a quote</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="sec faq" id="faq">
+  <div class="wrap faq__in">
+    <header class="sec__head">
+      <h2>Good to know before you buy.</h2>
+      <p>Something else on your mind? <a href="#contact">Ask us directly</a>.</p>
+    </header>
+    <div class="faq__list">
+      <details open>
+        <summary>How do I know what size AC I need?</summary>
+        <p>Size depends on floor area, ceiling height, sunlight, glass, the number of people and the equipment in the room. The <a href="#estimator">estimator above</a> gives a first figure. For the final answer we do a heat-load calculation during a free site visit.</p>
+      </details>
+      <details>
+        <summary>What is the difference between VRF and ductable AC?</summary>
+        <p>A ductable unit cools one large zone through ducts from a single indoor unit. A VRF system connects many indoor units to one outdoor system and lets every room set its own temperature, so it saves power when only part of the building is in use.</p>
+      </details>
+      <details>
+        <summary>How often should an AC be serviced?</summary>
+        <p>For most homes, a service before summer and another after the monsoon works well. Offices, shops and restaurants that run their units all day usually need a visit every three months.</p>
+      </details>
+      <details>
+        <summary>Do you take up only installation, or supply as well?</summary>
+        <p>Both. We can supply and install the complete system, or install equipment you have already bought. We will tell you honestly if the equipment does not suit the space.</p>
+      </details>
+      <details>
+        <summary>Do you handle emergency breakdowns?</summary>
+        <p>Yes. Call or WhatsApp us with the problem and your location. AMC customers get priority response.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CONTACT ======================= -->
+<section class="band contact" id="contact">
+  <div class="wrap contact__in">
+    <div class="contact__copy">
+      <h2>Let's get your air right.</h2>
+      <p>Book a free site visit. Tell us what you need and we usually call back the same working day.</p>
+      <!-- PLACEHOLDER: phone, WhatsApp, address and hours come from assets/js/config.js -->
+      <dl class="contact__list">
+        <div><dt>Call</dt><dd><a data-link="tel" href="tel:+919000000000"><span data-c="phoneDisplay">+91 90000 00000</span></a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a data-link="whatsapp" href="https://wa.me/919000000000" target="_blank" rel="noopener"><span data-c="whatsappDisplay">+91 90000 00000</span></a></dd></div>
+        <div><dt>Email</dt><dd><a data-link="email" href="mailto:aaquib@shaikhssphere.com"><span data-c="email">aaquib@shaikhssphere.com</span></a></dd></div>
+        <div><dt>Office</dt><dd data-c="address">Office address, area and city go here</dd></div>
+        <div><dt>Hours</dt><dd data-c="hours">Mon to Sat, 9:30 am to 7:00 pm</dd></div>
+      </dl>
+    </div>
+
+    <form class="contact__form" id="enquiry" novalidate>
+      <div id="enquiry-fields">
+        <h3>Send an enquiry</h3>
+        <div class="field-pair">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input type="text" id="f-name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone number</label>
+            <input type="tel" id="f-phone" autocomplete="tel" inputmode="tel" required>
+          </div>
+        </div>
+        <div class="field-pair">
+          <div class="field">
+            <label for="f-service">What do you need?</label>
+            <select id="f-service">
+              <option>New AC installation</option>
+              <option>VRF / VRV system</option>
+              <option>Ventilation or exhaust</option>
+              <option>Ducting work</option>
+              <option>AMC / servicing</option>
+              <option>Repair or breakdown</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-space">Type of space</label>
+            <select id="f-space">
+              <option>Home</option>
+              <option>Office</option>
+              <option>Shop or showroom</option>
+              <option>Restaurant</option>
+              <option>Clinic or hospital</option>
+              <option>Factory or warehouse</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-msg">Details (optional)</label>
+          <textarea id="f-msg" rows="3" placeholder="Area, number of rooms, location, preferred time for a visit"></textarea>
+        </div>
+        <p class="form-error" id="enquiry-error" role="alert" hidden></p>
+        <button class="btn btn--navy btn--block" type="submit">Prepare my enquiry</button>
+        <p class="form-fine">Your enquiry opens in WhatsApp, ready to send. Nothing is stored on this website.</p>
+      </div>
+      <div id="enquiry-done" hidden>
+        <h3>Your enquiry is ready</h3>
+        <p>Tap the button to send it to us on WhatsApp.</p>
+        <pre class="enquiry-preview" id="enquiry-preview"></pre>
+        <a class="btn btn--wa btn--block" id="enquiry-send" href="#contact" target="_blank" rel="noopener">Send on WhatsApp</a>
+        <button class="link-plain" type="button" id="enquiry-edit">Edit details</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="wrap footer__top">
+    <p class="footer__line">Every degree, under control.</p>
+    <!-- a small echo of the hero drawing: the terrace, seen from the street -->
+    <svg class="footer__art draw draw--dark" viewBox="0 0 420 96" aria-hidden="true">
+      <path class="ln" d="M0 88H420M24 88V70H396V88"/>
+      <g class="eq"><rect x="52" y="34" width="56" height="34" rx="4"/><rect x="132" y="34" width="56" height="34" rx="4"/><rect x="232" y="14" width="74" height="54" rx="4"/><rect x="242" y="6" width="54" height="8" rx="2"/></g>
+      <g class="fan" transform="translate(70 51) scale(.8)"><path class="fan__b" d="M0 0c-2-5-1-9 0-11c3 3 3 7 0 11c5-2 9-1 11 0c-3 3-7 3-11 0c2 5 1 9 0 11c-3-3-3-7 0-11c-5 2-9 1-11 0c3-3 7-3 11 0Z"/></g><g class="fan" transform="translate(150 51) scale(.8)"><path class="fan__b" d="M0 0c-2-5-1-9 0-11c3 3 3 7 0 11c5-2 9-1 11 0c-3 3-7 3-11 0c2 5 1 9 0 11c-3-3-3-7 0-11c-5 2-9 1-11 0c3-3 7-3 11 0Z"/></g>
+      <g class="ln ln--thin"><circle cx="70" cy="51" r="11"/><circle cx="150" cy="51" r="11"/><path d="M90 42H101M90 48H101M90 54H101M90 60H101M170 42H181M170 48H181M170 54H181M170 60H181M240 26H298M240 34H298M240 42H298M240 50H298M240 58H298M58 68V70M102 68V70M138 68V70M182 68V70M240 68V70M298 68V70"/></g>
+      <g class="duct"><path d="M340 70V30H356V70Z"/></g>
+      <path class="ln" d="M334 30H362L358 21H338Z"/>
+      <g class="pipe"><path d="M306 56H322V70"/></g>
+      <g class="air air--warm"><path d="M348 18C343 12 353 8 348 0"/><path d="M80 30C75 24 85 18 80 10"/><path d="M160 30C155 24 165 18 160 10"/></g>
+    </svg>
+  </div>
+  <div class="wrap footer__in">
+    <div class="footer__brand">
+      <img src="assets/img/logo-horizontal-on-dark.svg" width="920" height="268" alt="Shaikh's Sphere Enterprises" loading="lazy">
+      <p>HVAC solutions and services. Air conditioning, ventilation, ducting and maintenance for homes, offices and commercial spaces.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <h2>Explore</h2>
+      <a href="#services">Services</a>
+      <a href="#sectors">Who we serve</a>
+      <a href="#estimator">AC size estimator</a>
+      <a href="#process">Process</a>
+      <a href="#projects">Projects</a>
+      <a href="#amc">AMC plans</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer__contact">
+      <h2>Reach us</h2>
+      <a data-link="tel" href="tel:+919000000000"><span data-c="phoneDisplay">+91 90000 00000</span></a>
+      <a data-link="email" href="mailto:aaquib@shaikhssphere.com"><span data-c="email">aaquib@shaikhssphere.com</span></a>
+      <span data-c="address">Office address, area and city go here</span>
+      <span data-c="hours">Mon to Sat, 9:30 am to 7:00 pm</span>
+    </div>
+  </div>
+  <div class="wrap footer__base">
+    <span>&copy; <span id="year">2026</span> Shaikh's Sphere Enterprises. All rights reserved.</span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<!-- Mobile quick actions -->
+<div class="dock" id="dock">
+  <a class="dock__btn" data-link="tel" href="#contact">
+    <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4.2 2.8h2.9l1.4 3.6-1.9 1.3a9.6 9.6 0 0 0 5.7 5.7l1.3-1.9 3.6 1.4v2.9a1.6 1.6 0 0 1-1.7 1.6C9 17 3 11 2.6 4.5a1.6 1.6 0 0 1 1.6-1.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    Call now
+  </a>
+  <a class="dock__btn dock__btn--wa" data-link="whatsapp" href="#contact" target="_blank" rel="noopener">
+    <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 17l1.1-3.6A7.2 7.2 0 1 1 7 16.1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
