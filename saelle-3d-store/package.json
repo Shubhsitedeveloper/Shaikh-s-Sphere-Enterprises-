@@ -1,0 +1,13 @@
+{
+  "name": "saelle-3d-store",
+  "private": true,
+  "type": "module",
+  "description": "Walk-in 3D beauty store for the demo brand Saelle (three.js).",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "DEV=1 node build.mjs && npx serve ."
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}
