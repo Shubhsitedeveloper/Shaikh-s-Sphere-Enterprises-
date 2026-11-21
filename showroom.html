@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Walk-in AC showroom | Shaikh's Sphere Enterprises</title>
+<meta name="description" content="Walk through the Shaikh's Sphere Enterprises showroom in 3D: split ACs, cassette and ducted units, VRF, ventilation, ducting and cold rooms. Pick what you need and send your list for a quote.">
+<meta name="theme-color" content="#0A1636">
+<meta property="og:title" content="Walk-in AC showroom | Shaikh's Sphere Enterprises">
+<meta property="og:description" content="Walk the aisles in 3D, put what you need in the trolley and send the list for a quote.">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/showroom.css">
+<link rel="modulepreload" href="assets/js/vendor/three.module.min.js">
+<script type="importmap">
+{ "imports": { "three": "./assets/js/vendor/three.module.min.js", "three/addons/": "./assets/js/vendor/addons/" } }
+</script>
+</head>
+<body>
+<!-- ============================================================
+     WALK-IN SHOWROOM (3D)
+     Products, descriptions and specs: assets/js/showroom/data.js
+     WhatsApp number and email: assets/js/config.js (shared with the main site)
+     3D assets: Poly Haven (CC0) textures, HDRI and models in assets/showroom/
+     ============================================================ -->
+<div class="sr" id="sr">
+  <canvas id="sr-canvas" class="sr-canvas" aria-label="3D showroom. Drag to look around, use W A S D or the arrow keys to walk, and select a product to see it." role="img"></canvas>
+
+  <!-- hotspot dots over each product (positioned by script) -->
+  <div class="sr-dots" id="sr-dots"></div>
+  <div class="sr-tip" id="sr-tip" aria-hidden="true"></div>
+
+  <!-- ===== intro, shown over the street view ===== -->
+  <section class="sr-intro" id="sr-intro" aria-labelledby="sr-title">
+    <div class="sr-intro__scrim" aria-hidden="true"></div>
+    <a class="sr-intro__brand" href="index.html" aria-label="Shaikh's Sphere Enterprises, back to the website">
+      <img src="assets/img/logo-horizontal-on-dark.svg" width="920" height="268" alt="Shaikh's Sphere Enterprises">
+    </a>
+    <div class="sr-intro__copy">
+      <p class="sr-intro__kick"><span class="sr-live" aria-hidden="true"></span>Walk-in showroom · open now in 3D</p>
+      <h1 id="sr-title">Walk into our AC showroom.</h1>
+      <p class="sr-intro__lead">Split ACs, cassettes, VRF, ventilation, ducting and cold rooms, all on display across three aisles. Put what you need in the trolley and send the list from the enquiry desk.</p>
+      <div class="sr-intro__cta">
+        <button class="sr-btn sr-btn--copper sr-btn--lg" id="sr-enter" type="button" disabled>
+          <span>Enter the showroom</span>
+          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="sr-link" id="sr-intro-list" type="button">Browse as a list</button>
+      </div>
+      <div class="sr-intro__load" aria-live="polite">
+        <span class="sr-intro__bar"><span id="sr-load-bar"></span></span>
+        <span id="sr-load">Opening the doors…</span>
+      </div>
+      <ul class="sr-intro__keys" aria-label="Controls">
+        <li><kbd>Drag</kbd> look around</li>
+        <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> walk</li>
+        <li><kbd>Scroll</kbd> step forward</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== in-store interface ===== -->
+  <div class="sr-hud" id="sr-hud" hidden>
+    <header class="sr-top">
+      <div class="sr-top__l">
+        <a class="sr-back" href="index.html">
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M16 10H5M9 5l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <img src="assets/img/icon.svg" width="22" height="22" alt="">
+          <span>Website</span>
+        </a>
+        <p class="sr-where" aria-live="polite"><span class="sr-live" aria-hidden="true"></span><span id="sr-where">Entrance</span></p>
+      </div>
+      <div class="sr-top__r">
+        <button class="sr-pill" id="sr-list-btn" type="button">
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M7 5h10M7 10h10M7 15h10M3.5 5h.01M3.5 10h.01M3.5 15h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>List</span>
+        </button>
+        <button class="sr-pill" id="sr-tour" type="button" data-state="off">
+          <svg class="i-play" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><path d="M6 4l10 6-10 6z" fill="currentColor"/></svg>
+          <svg class="i-stop" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><rect x="5" y="5" width="10" height="10" rx="2" fill="currentColor"/></svg>
+          <span>Take the tour</span>
+        </button>
+        <button class="sr-cart" id="sr-cart" type="button" aria-label="Open your enquiry slip">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 4h2.2l2.3 10.2a1.6 1.6 0 0 0 1.6 1.3h7.8a1.6 1.6 0 0 0 1.6-1.2L20.5 8H6.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.4" fill="currentColor"/><circle cx="17" cy="19.5" r="1.4" fill="currentColor"/></svg>
+          <span class="sr-cart__tr" id="sr-cart-tr">Trolley</span>
+          <span class="sr-cart__n" id="sr-cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="sr-toast" id="sr-toast" role="status" aria-live="polite" hidden>
+      <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#F2B23A"/><path d="M6 10.3l2.6 2.6L14.2 7.4" fill="none" stroke="#0A1636" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span id="sr-toast-text"></span>
+    </div>
+
+    <div class="sr-hint" id="sr-hint" hidden>
+      <p><strong>Look around</strong> by dragging. <strong>Walk</strong> with <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>, the arrow keys or the scroll wheel.</p>
+      <p>Select any <span class="sr-hint__dot" aria-hidden="true"></span> to see a product and add it to your trolley.</p>
+    </div>
+
+    <div class="sr-bar" id="sr-bar" aria-hidden="true">
+      <img class="sr-bar__img" id="sr-bar-img" alt="" width="64" height="64">
+      <div class="sr-bar__txt">
+        <p class="sr-bar__kick" id="sr-bar-kick"></p>
+        <p class="sr-bar__name" id="sr-bar-name"></p>
+        <p class="sr-bar__spec" id="sr-bar-spec"></p>
+      </div>
+      <button class="sr-btn sr-btn--navy" id="sr-bar-add" type="button">
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <span>Add to trolley</span>
+      </button>
+    </div>
+
+    <div class="sr-joy" id="sr-joy" hidden aria-hidden="true"><span class="sr-joy__knob" id="sr-joy-knob"></span></div>
+  </div>
+
+  <!-- ===== enquiry slip (the checkout) ===== -->
+  <aside class="sr-slip" id="sr-slip" hidden aria-labelledby="sr-slip-title" role="dialog">
+    <div class="sr-slip__paper">
+      <button class="sr-slip__x" id="sr-slip-close" type="button" aria-label="Close the slip">
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <div id="sr-slip-head">
+        <p class="sr-slip__kick">Enquiry desk · slip</p>
+        <h2 id="sr-slip-title">Ready to send?</h2>
+        <p class="sr-slip__sub" id="sr-slip-sub"></p>
+      </div>
+      <div id="sr-slip-done" hidden>
+        <p class="sr-slip__ok"><svg viewBox="0 0 20 20" width="22" height="22" aria-hidden="true"><circle cx="10" cy="10" r="9.5" fill="#1F9D57"/><path d="M6 10.3l2.6 2.6L14.2 7.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sent. Thank you!</p>
+        <p class="sr-slip__sub">WhatsApp opened with your list. The team replies with prices and a time for the free site survey.</p>
+      </div>
+      <ol class="sr-slip__list" id="sr-slip-list"></ol>
+      <p class="sr-slip__empty" id="sr-slip-empty">Your trolley is empty. Select any product in the aisles and add it here.</p>
+      <p class="sr-slip__total"><span>Total cooling picked</span><strong id="sr-slip-total">—</strong></p>
+      <form class="sr-slip__form" id="sr-slip-form" novalidate>
+        <div class="sr-field"><label for="sr-name">Your name <span>(optional)</span></label><input id="sr-name" type="text" autocomplete="name"></div>
+        <div class="sr-field"><label for="sr-area">Site or area <span>(optional)</span></label><input id="sr-area" type="text" placeholder="e.g. 3 BHK flat, Andheri"></div>
+        <button class="sr-btn sr-btn--wa sr-btn--block" id="sr-slip-send" type="submit">
+          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 17l1.1-3.6A7.2 7.2 0 1 1 7 16.1z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          <span>Send on WhatsApp</span>
+        </button>
+        <a class="sr-link sr-link--center" id="sr-slip-mail" href="#">Email the list instead</a>
+      </form>
+      <button class="sr-btn sr-btn--ghost sr-btn--block sr-slip__again" id="sr-slip-again" type="button">Keep browsing</button>
+    </div>
+  </aside>
+
+  <!-- ===== list view (also used when 3D is not available) ===== -->
+  <section class="sr-list" id="sr-list" hidden aria-labelledby="sr-list-title">
+    <div class="sr-list__in">
+      <header class="sr-list__head">
+        <div>
+          <p class="sr-slip__kick">Everything in the showroom</p>
+          <h2 id="sr-list-title">Browse as a list</h2>
+        </div>
+        <button class="sr-pill" id="sr-list-close" type="button">Back to the 3D view</button>
+      </header>
+      <div id="sr-list-body"></div>
+    </div>
+  </section>
+
+  <p class="sr-nogl" id="sr-nogl" hidden>Your browser could not open the 3D view, so here is everything on display as a list.</p>
+  <canvas class="sr-confetti" id="sr-confetti" aria-hidden="true"></canvas>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script type="module" src="assets/js/showroom/app.js"></script>
+</body>
+</html>
